@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-image: url('../assets/dark-wallpapers.avif'); */
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: monospace;
+    width: 100%;
+    /* height: 120vh; */
+}
+
+:root{
+    ---background-color: rgba(255, 255, 255, 0.153);
+    ---btn-color:white;
+    ---btn-size:1%;
+    ---radius:10px;
+    ---btn-hover-success:lime;
+    ---btn-hover-delete:red;
+}
+/* ----nav styling---- */
+.nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    display: grid;
+    grid-template-columns: auto auto auto;
+   
+}
+
+.nav .logo{
+    float: left;
+    color: white;
+    margin:1%;
+}
+
+.nav button{
+    float: right;
+    margin:1%;
+    background-color: white;
+    border: none;
+}
+
+/* ----form styling---- */
+.form .close{
+    float: right;
+  cursor: pointer;
+  right: 0;
+}
+.close-holder{
+    width: 100%;
+    padding: 10px;
+}
+.form{
+    position: fixed;
+    color: white;
+    font-weight:600 ;
+    background-color:rgba(0, 0, 0, 0.797);
+    padding: 10px;
+    width: 80%;
+    border-radius: var(---radius);
+    display:none;
+    margin: 3%  10%;
+    border: 1px solid white;
+}
+input,textarea{
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    border:none
+}
+.form button{
+    margin: 1%;
+    border: none;
+    background-color: white;
+}
+ button{
+    padding:var(---btn-size);
+    font-weight:600 ;
+    border-radius: var(---radius);
+
+ }
+/* ----Card styling---- */
+.container{
+  
+    margin:4% 4%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* justify-content: space-evenly; */
+}
+.card{
+    background-image: url('./assets/dark-wallpapers.avif');
+    background-size: cover;
+    color: white;
+    width:350px;
+    /* --- */
+    border: none;
+    border-radius: 10px;
+    margin:4% 3%;
+    padding:10px;
+}
+
+.card .btn-holder{
+    width:100%;
+    display:grid;
+    grid-template-columns:auto auto;
+}
+.card .btn-holder button{
+    padding: 10px;
+    background-color: black;
+    border: none;
+    margin: 4px;
+}
+.card .btn-holder button:nth-child(1):hover{
+    background-color:var(---btn-hover-success);
+    color: white;
+    box-shadow:var(---btn-hover-success) 2px 2px 20px ;
+}
+.card .btn-holder button:nth-child(2):hover{
+    background-color:var(---btn-hover-delete);
+    color: white;
+    box-shadow:var(---btn-hover-delete) 2px 2px 20px ;
+}
+.card p, .card h2{
+    margin:2%;
+    text-shadow: 2px 2px 20px black;
+}
+
+.card .card-header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.number{
+    margin: 1%;
+    width: 90%;
+}
+.status{
+    width: 40%;
+    margin: 1%;
+    float: right;
+}
+
+@media (width: 700px){
+    .container{
+        grid-template-columns: auto;
+        margin:0 10%;
+     
+    }
+ .form input,textarea{
+    width: 100%;
+ }
+ .card{
+    width: 100%;
+ }
+
+}
+
+.score{
+    color: white;
+}
+
+
+ 
